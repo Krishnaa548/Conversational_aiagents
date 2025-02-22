@@ -1,0 +1,25 @@
+
+If using n8n, include a workflow JSON file (e.g., elevenlabs_automation.json) that:
+
+Triggers on user input (HTTP/webhook).
+
+Runs your AI agent logic.
+
+Calls Eleven Labs API for voice output.
+
+Step 6: Host Your Agent
+Deploy your agent on a platform like Render or AWS so it’s accessible via HTTPS (required for live voice interactions). Use webhooks to connect Eleven Labs.
+
+Key Files to Include in Your Repo:
+Copy
+your-repo/
+├── ai_agent/          # Your conversational AI logic
+├── elevenlabs_integration.py  
+├── demo.py            # Demo script
+├── .env.example  
+├── README.md          # Setup instructions
+└── workflows/         # n8n automation examples (optional)
+Important Notes:
+Never hardcode API keys—use GitHub Secrets or environment variables.
+
+For full voice conversations, add speech-to-text (e.g., Whisper API) to handle user audio input.
